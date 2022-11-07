@@ -1,24 +1,12 @@
-import { useState, useEffect } from "react";
-export default function useFetch(url) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [information, setInformation] = useState([]);
-  const [order, setOrder] = useState(0);
-  async function getInfo(url) {
-    const res = await fetch(url);
-    const data = await res.json();
-    setInformation(data);
-    setIsLoading(false);
-    console.log(data);
-  }
-  useEffect(() => {
-    getInfo(url);
-  }, [url]);
-  return {
-    isLoading,
-    information,
-    order,
-    // setIsLoading,
-    // setInformation,
-    setOrder,
-  };
-}
+// import { useState, useEffect } from "react";
+// export default function useFetch(url) {
+
+//   return {
+//     isLoading,
+//     information,
+//     order,
+//     // setIsLoading,
+//     // setInformation,
+//     setOrder,
+//   };
+// }
